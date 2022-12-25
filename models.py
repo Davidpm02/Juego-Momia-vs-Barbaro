@@ -30,11 +30,12 @@ class Dado():
    - estarVivo()
 """
 class Personaje():
-    def __init__(self,nombre,vida,ataque,defensa):
+    def __init__(self,nombre,vida,ataque,defensa,velocidad):
         self.nombre = nombre
         self.vida = vida
         self.ataque = ataque
         self.defensa = defensa
+        self.velocidad = velocidad
     
     def atacar(self):
         listaResultados = []
@@ -82,8 +83,8 @@ class Personaje():
     - defender
 """
 class Momia(Personaje):
-    def __init__(self,nombre,vida,ataque,defensa):
-        Personaje.__init__(self,nombre,vida,ataque,defensa)
+    def __init__(self,nombre,vida,ataque,defensa,velocidad):
+        Personaje.__init__(self,nombre,vida,ataque,defensa,velocidad)
     
     def defender(self, numImpactos): # Representa el numero de impactos de los que el personaje se tiene que intentar defender.
         contadorImpactos = 0
@@ -122,8 +123,8 @@ class Momia(Personaje):
     - defender
 """
 class Barbaro(Personaje):
-    def __init__(self,nombre,vida,ataque,defensa):
-        Personaje.__init__(self,nombre,vida,ataque,defensa)
+    def __init__(self,nombre,vida,ataque,defensa,velocidad):
+        Personaje.__init__(self,nombre,vida,ataque,defensa,velocidad)
     
     def defender(self, numImpactos): # Representa el numero de impactos de los que el personaje se tiene que intentar defender.
         contadorImpactos = 0
