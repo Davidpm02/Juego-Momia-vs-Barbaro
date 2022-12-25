@@ -29,7 +29,24 @@ Ademas, es posible establecer un numero de turnos fijado antes del comienzo de l
 <br>
 <br>
 
+<h2> COMMIT #2 </h2>
+
+
+  - Se ha añadido el atributo 'velocidad' para los personajes. Este atributo sera crucial para decidir que personaje empieza antes el ataque
+  durante la batalla. 
+  
+  Se ha mejorado la funcion principal para que tome en cuenta la novedad (ahora se verificara que personaje es mas rapido, y este empezara a 
+  atacar antes durante la batalla).
+  
+  - Se ha creado una nueva funcion 'comprobarVelocidad()' que envia un mensaje por pantalla avisandonos de que personaje es mas rapido que
+  el otro. 
+  
+  Esta funcion es llamada desde la funcion principal, por lo que el aviso aparecera siempre al principio de la terminal al comenzar una batalla.
+<br>
+<br>
+<br>
+<br>
 
 <h2>Futuros Commits</h2>
 
-Posteriormente, se anadiran estadisticas como la velocidad que, en funcion de su valor, hara que un personaje ataque antes que otro de manera automatica.
+Posteriormente, se anadiran golpes criticos, que actuaran en funcion de una probabilidad y con unos efectos todavia por definir.
