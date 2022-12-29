@@ -47,6 +47,30 @@ Ademas, es posible establecer un numero de turnos fijado antes del comienzo de l
 <br>
 <br>
 
-<h2>Futuros Commits</h2>
+<h2> COMMIT #3 </h2>
 
-Posteriormente, se anadiran golpes criticos, que actuaran en funcion de una probabilidad y con unos efectos todavia por definir.
+
+  - Se ha añadido una nueva funcionalidad, los **golpes criticos**.
+  
+  Los golpes criticos funcionan asestando un golpe adicional al final del turno de ataque de un personaje.
+  
+  Teniendo en cuenta que los ataques a un personaje 'b' se realizan mediante una tirada de dado en base al atributo ataque del personaje 'a', el funcionamiento de los golpes criticos se puede explicar de la siguiente manera:
+ - El personaje 'a' realiza tantas tiradas de dado como indique su atributo ataque, y solo seran validas aquellas tiradas que cumplan ciertas condiciones.
+ - El personaje 'a' ataca al personaje 'b' en base al resultado anterior.
+ - Se ejecuta una nueva tirada de dado adicional (tambien en base al atributo ataque del personaje 'a'), para decidir si asestar un golpe critico.
+ - Para que se valide la tirada adicional y se ejecute el golpe critico, el personaje DEBE haber realizado un total de 3 tiradas efectivas:
+  
+   - Si se cumple, se ejecutara (solo) un golpe critico (se avisara por pantalla), conservando el mismo efecto que un golpe normal.
+   - En caso de no cumplirse la condicion, el programa continuara su curso, y el personaje 'a' no asestara ningun golpe critico en ese turno.
+<br>
+<br>
+<br>
+<br>  
+  
+<h2>Futuros Commits</h2> 
+ 
+  Estaria bien modificar los mensajes por pantalla para personalizar el tipo de personajes que hemos elegido (MOMIA {} vs BARBARO {}).
+  
+  Personajes con valor < 3 de ataque tambien deberian de ser capaces de asestar golpes criticos.
+  
+  **Ataques fisicos y especiales?**
