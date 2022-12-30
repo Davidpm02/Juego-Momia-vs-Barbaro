@@ -35,19 +35,23 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
             try:
                 assert personaje1.estarVivo() == True and personaje2.estarVivo() == True
                 if personaje1.velocidad >= personaje2.velocidad:
-                    print('# TURNO {} >> BARBARO vs MOMIA'.format(contador))
+                    print('# TURNO {} >> {} vs {}'.format(contador,
+                                                                  type(personaje1).__name__.upper(),
+                                                                  type(personaje2).__name__.upper()))
                     ataquesRealizados = personaje1.atacar()
                     personaje2.defender(ataquesRealizados)
-                    print('La momia {} no pudo bloquear {} impactos y queda con {} de vida.'.format(personaje2.nombre,
-                                                                                           ataquesRealizados,
-                                                                                           personaje2.vida))
+                    print('La {} {} no pudo bloquear {} impactos y queda con {} de vida.'.format(type(personaje2).__name__,
+                                                                                                 personaje2.nombre,
+                                                                                                 ataquesRealizados,
+                                                                                                 personaje2.vida))
                     posibleCritico = personaje1.atacar()   # .atacar() devuelve un entero que representa la cantidad de golpes validos
                     if posibleCritico == 3:
                         nuevoAtaque = 1
                         personaje2.defender(nuevoAtaque)
-                        print('**** La momia {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(personaje2.nombre,
-                                                                                                                       nuevoAtaque,
-                                                                                                                       personaje2.vida))
+                        print('**** La {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje2).__name__,
+                                                                                                                    personaje2.nombre,
+                                                                                                                    nuevoAtaque,
+                                                                                                                    personaje2.vida))
                         
                         
                     contador +=1
@@ -55,30 +59,37 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                     print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
                     ataquesRealizados = 0
                 else:
-                    print('# TURNO {} >> MOMIA vs BARBARO'.format(contador))
+                    print('# TURNO {} >> {} vs {}'.format(contador,
+                                                         type(personaje2).__name__.upper(),
+                                                         type(personaje1).__name__.upper()))
                     ataquesRealizados = personaje2.atacar()
                     personaje1.defender(ataquesRealizados)
-                    print('El barbaro {} no pudo bloquear {} impactos y queda con {} de vida.'.format(personaje1.nombre,
-                                                                                             ataquesRealizados,
-                                                                                             personaje1.vida))
+                    print('El {} {} no pudo bloquear {} impactos y queda con {} de vida.'.format(type(personaje1).__name__,
+                                                                                                 personaje1.nombre,
+                                                                                                 ataquesRealizados,
+                                                                                                 personaje1.vida))
                     posibleCritico = personaje2.atacar()   # .atacar() devuelve un entero que representa la cantidad de golpes validos
                     if posibleCritico == 3:
                         nuevoAtaque = 1
                         personaje1.defender(nuevoAtaque)
-                        print('**** El barbaro {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(personaje1.nombre,
-                                                                                                                         nuevoAtaque,
-                                                                                                                         personaje1.vida))
+                        print('**** El {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje1).__name__,
+                                                                                                                    personaje1.nombre,
+                                                                                                                    nuevoAtaque,
+                                                                                                                    personaje1.vida))
                     contador +=1
                     totalTurnos -=1
                     print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
                     ataquesRealizados = 0
             except AssertionError:
                 if personaje1.estarVivo() == False and personaje2.estarVivo() == True:
-                    print("""> GANADOR MOMIA {}
-                           >>> Momia {} con {} de vida.
-                           >>> Barbaro {} con {} de vida.""".format(personaje2.nombre,
+                    print("""> GANADOR {} {}
+                           >>> {} {} con {} de vida.
+                           >>> {} {} con {} de vida.""".format(type(personaje2).__name__.upper(),
+                                                                    personaje2.nombre,
+                                                                    type(personaje2).__name__,
                                                                     personaje2.nombre,
                                                                     personaje2.vida,
+                                                                    type(personaje1).__name__,
                                                                     personaje1.nombre,
                                                                     0))
                     print('--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1))
@@ -87,11 +98,14 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                     print('\n'*5)
                     totalTurnos = 0  
                 elif personaje1.estarVivo() == True and personaje2.estarVivo() == False:
-                    print("""> GANADOR BARBARO {}
-                           >>> Barbaro {} con {} de vida.
-                           >>> Momia {} con {} de vida.""".format(personaje1.nombre,
+                    print("""> GANADOR {} {}
+                           >>> {} {} con {} de vida.
+                           >>> {} {} con {} de vida.""".format(type(personaje1).__name__.upper(),
+                                                                  personaje1.nombre,
+                                                                  type(personaje1).__name__,
                                                                   personaje1.nombre,
                                                                   personaje1.vida,
+                                                                  type(personaje2).__name__,
                                                                   personaje2.nombre,
                                                                   0))
                     print('--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1))
@@ -107,48 +121,59 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
             try:
                 assert personaje1.estarVivo() == True and personaje2.estarVivo() == True
                 if personaje2.velocidad < personaje1.velocidad:
-                    print('# TURNO {} >> MOMIA vs BARBARO'.format(contador))
+                    print('# TURNO {} >> {} vs {}'.format(contador,
+                                                               type(personaje2).__name__.upper(),
+                                                               type(personaje1).__name__.upper()))
                     ataquesRealizados = personaje2.atacar()
                     personaje1.defender(ataquesRealizados)
-                    print('El barbaro {} no pudo bloquear {} impactos y queda con {} de vida.'.format(personaje1.nombre,
-                                                                                             ataquesRealizados,
-                                                                                             personaje1.vida))
+                    print('El {} {} no pudo bloquear {} impactos y queda con {} de vida.'.format(type(personaje1).__name__,
+                                                                                                 personaje1.nombre,
+                                                                                                 ataquesRealizados,
+                                                                                                 personaje1.vida))
                     posibleCritico = personaje2.atacar()   # .atacar() devuelve un entero que representa la cantidad de golpes validos
                     if posibleCritico == 3:
                         nuevoAtaque = 1
                         personaje1.defender(nuevoAtaque)
-                        print('**** El barbaro {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(personaje1.nombre,
-                                                                                                                         nuevoAtaque,
-                                                                                                                         personaje1.vida))
+                        print('**** El {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje1).__name__,
+                                                                                                                    personaje1.nombre,
+                                                                                                                    nuevoAtaque,
+                                                                                                                    personaje1.vida))
                     contador +=1
                     totalTurnos -=1
                     print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
                     ataquesRealizados = 0
                 else:
-                    print('# TURNO {} >> BARBARO vs MOMIA'.format(contador))
+                    print('# TURNO {} >> {} vs {}'.format(contador,
+                                                             type(personaje1).__name__.upper(),
+                                                             type(personaje2).__name__.upper()))
                     ataquesRealizados = personaje1.atacar()
                     personaje2.defender(ataquesRealizados)
-                    print('La momia {} no pudo bloquear {} impactos y queda con {} de vida.'.format(personaje2.nombre,
-                                                                                           ataquesRealizados,
-                                                                                           personaje2.vida))
+                    print('La {} {} no pudo bloquear {} impactos y queda con {} de vida.'.format(type(personaje2).__name__,
+                                                                                                 personaje2.nombre,
+                                                                                                 ataquesRealizados,
+                                                                                                 personaje2.vida))
                     posibleCritico = personaje1.atacar()   # .atacar() devuelve un entero que representa la cantidad de golpes validos
                     if posibleCritico == 3:
                         nuevoAtaque = 1
                         personaje2.defender(nuevoAtaque)
-                        print('**** La momia {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(personaje2.nombre,
-                                                                                                                       nuevoAtaque,
-                                                                                                                       personaje2.vida))
+                        print('**** La {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje2).__name__,
+                                                                                                                    personaje2.nombre,
+                                                                                                                    nuevoAtaque,
+                                                                                                                    personaje2.vida))
                     contador +=1
                     totalTurnos -=1
                     print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
                     ataquesRealizados = 0
             except AssertionError:
                 if personaje1.estarVivo() == False and personaje2.estarVivo() == True:
-                    print("""> GANADOR MOMIA {}
-                           >>> Momia {} con {} de vida.
-                           >>> Barbaro {} con {} de vida.""".format(personaje2.nombre,
+                    print("""> GANADOR {} {}
+                           >>> {} {} con {} de vida.
+                           >>> {} {} con {} de vida.""".format(type(personaje2).__name__.upper(),
+                                                                    personaje2.nombre,
+                                                                    type(personaje2).__name__,
                                                                     personaje2.nombre,
                                                                     personaje2.vida,
+                                                                    type(personaje1).__name__,
                                                                     personaje1.nombre,
                                                                     0))
                     print('--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1))
@@ -157,11 +182,14 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                     print('\n'*5)
                     totalTurnos = 0
                 elif personaje1.estarVivo() == True and personaje2.estarVivo() == False:
-                    print("""> GANADOR BARBARO {}
-                           >>> Barbaro {} con {} de vida.
-                           >>> Momia {} con {} de vida.""".format(personaje1.nombre,
+                    print("""> GANADOR {} {}
+                           >>> {} {} con {} de vida.
+                           >>> {} {} con {} de vida.""".format(type(personaje1).__name__.upper(),
+                                                                  personaje1.nombre,
+                                                                  type(personaje1).__name__,
                                                                   personaje1.nombre,
                                                                   personaje1.vida,
+                                                                  type(personaje2).__name__,
                                                                   personaje2.nombre,
                                                                   0))
                     print('--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1))
@@ -174,13 +202,14 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
         else:
             try:
                 assert personaje1.estarVivo() == True and personaje2.estarVivo() == True
-                print("""> EMPATE {}
-                            >>> Barbaro {} con {} de vida.
-                            >>> Momia {} con {} de vida.""".format(personaje1.nombre,
-                                                                    personaje1.nombre,
-                                                                    personaje1.vida,
-                                                                    personaje2.nombre,
-                                                                    personaje2.vida))
+                print("""> EMPATE
+                            >>> {} {} con {} de vida.
+                            >>> {} {} con {} de vida.""".format(type(personaje1).__name__,
+                                                                personaje1.nombre,
+                                                                personaje1.vida,
+                                                                type(personaje2).__name__,
+                                                                personaje2.nombre,
+                                                                personaje2.vida))
                 print('--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1))
                 print('\n'*2)
                 print('*'*50)
@@ -188,11 +217,14 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                 break
             except AssertionError:
                 if personaje1.estarVivo() == False and personaje2.estarVivo() == True:
-                    print("""> GANADOR MOMIA {}
-                           >>> Momia {} con {} de vida.
-                           >>> Barbaro {} con {} de vida.""".format(personaje2.nombre,
+                    print("""> GANADOR {} {}
+                           >>> {} {} con {} de vida.
+                           >>> {} {} con {} de vida.""".format(type(personaje2).__name__.upper(),
+                                                                    personaje2.nombre,
+                                                                    type(personaje2).__name__,
                                                                     personaje2.nombre,
                                                                     personaje2.vida,
+                                                                    type(personaje1).__name__,
                                                                     personaje1.nombre,
                                                                     0))
                     print('--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1))
@@ -201,11 +233,14 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                     print('\n'*5)
                     totalTurnos = 0  
                 elif personaje1.estarVivo() == True and personaje2.estarVivo() == False:
-                    print("""> GANADOR BARBARO {}
-                           >>> Barbaro {} con {} de vida.
-                           >>> Momia {} con {} de vida.""".format(personaje1.nombre,
+                    print("""> GANADOR {} {}
+                           >>> {} {} con {} de vida.
+                           >>> {} {} con {} de vida.""".format(type(personaje1).__name__.upper(),
+                                                                  personaje1.nombre,
+                                                                  type(personaje1).__name__,
                                                                   personaje1.nombre,
                                                                   personaje1.vida,
+                                                                  type(personaje2).__name__,
                                                                   personaje2.nombre,
                                                                   0))
                     print('--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1))
@@ -222,7 +257,7 @@ if __name__ == '__main__':
 
     momia = Momia('Nefertari',8,2,3,2)
     barbaro = Barbaro('Conan',7,3,3,5)
-
+    print(type(momia).__name__.upper()),
     jugarPartida(barbaro,momia)
     
     # Seria recomendable cambiar los avisos de los turnos para que no ponga :MOMIA {} vs BARBARO {}.
