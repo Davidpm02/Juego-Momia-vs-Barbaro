@@ -66,11 +66,22 @@ Ademas, es posible establecer un numero de turnos fijado antes del comienzo de l
 <br>
 <br>
 <br>  
-  
+
+<h2> COMMIT #4 </h2>
+Se ha actualizado el archivo main.py modificando los mensajes que aparecian por pantalla anunciando el trancurso de la misma.
+Se ha realizado los siguientes cambios:
+
+  - Se ha modificado la forma de mostrar el nombre del tipo de personaje que escojemos (no su nombre (e.g: 'Conan'), si no su especie (e.g: 'Barbaro')).
+<br>
+<br>
+<br>
+<br> 
+
+
 <h2>Futuros Commits</h2> 
- 
-  Estaria bien modificar los mensajes por pantalla para personalizar el tipo de personajes que hemos elegido (MOMIA {} vs BARBARO {}).
   
   Personajes con valor < 3 de ataque tambien deberian de ser capaces de asestar golpes criticos.
   
   **Ataques fisicos y especiales?**
+  
+  Se deberia poder ofrecer al jugador la **posibilidad de escojer que tipo de personaje queria jugar** (models.py solo da opcion a Barbaro y Momia.)
