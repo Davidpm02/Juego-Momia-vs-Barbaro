@@ -1,6 +1,5 @@
 from models import Momia, Barbaro
 
-
 def comprobarVelocidad(personaje1,personaje2):
     if personaje1.velocidad > personaje2.velocidad:
         resultado = '''El personaje {} es mas rapido que el personaje {}!\nEl personaje {} comienza el ataque antes.'''.format(personaje1.nombre,
@@ -40,20 +39,29 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                                                   type(personaje2).__name__.upper()))
                     ataquesRealizados = personaje1.atacar()
                     personaje2.defender(ataquesRealizados)
-                    print('La {} {} no pudo bloquear {} impactos y queda con {} de vida.'.format(type(personaje2).__name__,
+                    print('{} {} no pudo bloquear {} impactos y queda con {} de vida.'.format(type(personaje2).__name__,
                                                                                                  personaje2.nombre,
                                                                                                  ataquesRealizados,
                                                                                                  personaje2.vida))
                     posibleCritico = personaje1.atacar()   # .atacar() devuelve un entero que representa la cantidad de golpes validos
-                    if posibleCritico == 3:
-                        nuevoAtaque = 1
-                        personaje2.defender(nuevoAtaque)
-                        print('**** La {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje2).__name__,
-                                                                                                                    personaje2.nombre,
-                                                                                                                    nuevoAtaque,
-                                                                                                                    personaje2.vida))
-                        
-                        
+                    if personaje1.ataque < 3:
+                        if posibleCritico == 2 :
+                            nuevoAtaque = 1
+                            personaje2.defender(nuevoAtaque)
+                            print('**** {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje2).__name__,
+                                                                                                                        personaje2.nombre,
+                                                                                                                        nuevoAtaque,
+                                                                                                                        personaje2.vida))
+                    elif personaje1.ataque >= 3:
+                        if posibleCritico == 3 :
+                            nuevoAtaque = 1
+                            personaje2.defender(nuevoAtaque)
+                            print('**** {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje2).__name__,
+                                                                                                                        personaje2.nombre,
+                                                                                                                        nuevoAtaque,
+                                                                                                                        personaje2.vida))
+                            
+                            
                     contador +=1
                     totalTurnos -=1
                     print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
@@ -69,13 +77,22 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                                                                                  ataquesRealizados,
                                                                                                  personaje1.vida))
                     posibleCritico = personaje2.atacar()   # .atacar() devuelve un entero que representa la cantidad de golpes validos
-                    if posibleCritico == 3:
-                        nuevoAtaque = 1
-                        personaje1.defender(nuevoAtaque)
-                        print('**** El {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje1).__name__,
-                                                                                                                    personaje1.nombre,
-                                                                                                                    nuevoAtaque,
-                                                                                                                    personaje1.vida))
+                    if personaje2.ataque < 3:
+                        if posibleCritico == 2:
+                            nuevoAtaque = 1
+                            personaje1.defender(nuevoAtaque)
+                            print('**** El {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje1).__name__,
+                                                                                                                        personaje1.nombre,
+                                                                                                                        nuevoAtaque,
+                                                                                                                        personaje1.vida))
+                    elif personaje2.ataque >= 3:
+                        if posibleCritico == 3:
+                            nuevoAtaque = 1
+                            personaje1.defender(nuevoAtaque)
+                            print('**** El {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje1).__name__,
+                                                                                                                        personaje1.nombre,
+                                                                                                                        nuevoAtaque,
+                                                                                                                        personaje1.vida))
                     contador +=1
                     totalTurnos -=1
                     print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
@@ -131,13 +148,22 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                                                                                  ataquesRealizados,
                                                                                                  personaje1.vida))
                     posibleCritico = personaje2.atacar()   # .atacar() devuelve un entero que representa la cantidad de golpes validos
-                    if posibleCritico == 3:
-                        nuevoAtaque = 1
-                        personaje1.defender(nuevoAtaque)
-                        print('**** El {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje1).__name__,
-                                                                                                                    personaje1.nombre,
-                                                                                                                    nuevoAtaque,
-                                                                                                                    personaje1.vida))
+                    if personaje2.ataque < 3:
+                        if posibleCritico == 2:
+                            nuevoAtaque = 1
+                            personaje1.defender(nuevoAtaque)
+                            print('**** El {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje1).__name__,
+                                                                                                                        personaje1.nombre,
+                                                                                                                        nuevoAtaque,
+                                                                                                                        personaje1.vida))
+                    elif personaje2.ataque >= 3:
+                        if posibleCritico == 3:
+                            nuevoAtaque = 1
+                            personaje1.defender(nuevoAtaque)
+                            print('**** El {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje1).__name__,
+                                                                                                                        personaje1.nombre,
+                                                                                                                        nuevoAtaque,
+                                                                                                                        personaje1.vida))
                     contador +=1
                     totalTurnos -=1
                     print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
@@ -153,13 +179,22 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                                                                                  ataquesRealizados,
                                                                                                  personaje2.vida))
                     posibleCritico = personaje1.atacar()   # .atacar() devuelve un entero que representa la cantidad de golpes validos
-                    if posibleCritico == 3:
-                        nuevoAtaque = 1
-                        personaje2.defender(nuevoAtaque)
-                        print('**** La {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje2).__name__,
-                                                                                                                    personaje2.nombre,
-                                                                                                                    nuevoAtaque,
-                                                                                                                    personaje2.vida))
+                    if personaje1.ataque < 3:
+                        if posibleCritico == 2:
+                            nuevoAtaque = 1
+                            personaje2.defender(nuevoAtaque)
+                            print('**** La {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje2).__name__,
+                                                                                                                        personaje2.nombre,
+                                                                                                                        nuevoAtaque,
+                                                                                                                        personaje2.vida))
+                    elif personaje1.ataque >= 3:
+                        if posibleCritico == 3:
+                            nuevoAtaque = 1
+                            personaje2.defender(nuevoAtaque)
+                            print('**** La {} {} no pudo bloquear {} GOLPE CRITICO y queda con {} de vida. ****'.format(type(personaje2).__name__,
+                                                                                                                        personaje2.nombre,
+                                                                                                                        nuevoAtaque,
+                                                                                                                        personaje2.vida))
                     contador +=1
                     totalTurnos -=1
                     print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
@@ -257,8 +292,5 @@ if __name__ == '__main__':
 
     momia = Momia('Nefertari',8,2,3,2)
     barbaro = Barbaro('Conan',7,3,3,5)
-    print(type(momia).__name__.upper()),
-    jugarPartida(barbaro,momia)
     
-    # Seria recomendable cambiar los avisos de los turnos para que no ponga :MOMIA {} vs BARBARO {}.
-    # Modificar para que ponga el personaje que es (si pongo que mi personaje es un alien, que ponga ALIEN).
+    jugarPartida(barbaro,momia)
