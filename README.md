@@ -77,11 +77,21 @@ Se ha realizado los siguientes cambios:
 <br>
 <br> 
 
+<h2> COMMIT #5 </h2>
+Se ha solucionado un error que impedia que personajes con un valor de ataque < 3 no pudiesen ejecutar golpes criticos (debido a la naturaleza propia de como estos estaban definidos.)
+
+
+<br>
+<br>
+<br>
+<br>
 
 <h2>Futuros Commits</h2> 
   
-  Personajes con valor < 3 de ataque tambien deberian de ser capaces de asestar golpes criticos.
-  
   **Ataques fisicos y especiales?**
+  
+    - Inluir ataques fisicos y especiales.
+    - Incluir defensas fisicas y especiales.
+    - ...
   
   Se deberia poder ofrecer al jugador la **posibilidad de escojer que tipo de personaje queria jugar** (models.py solo da opcion a Barbaro y Momia.)
