@@ -86,12 +86,16 @@ Se ha solucionado un error que impedia que personajes con un valor de ataque < 3
 <br>
 <br>
 
+<h2> COMMIT #6 </h2>
+Se han añadido los atributos 'ataque_especial' y 'defensa_especial' a los personajes. Todavia falta implementar la funcion de ataque y defensa especial.
+
+<br>
+<br>
+<br>
+<br>
+
 <h2>Futuros Commits</h2> 
   
-  **Ataques fisicos y especiales?**
-  
-    - Inluir ataques fisicos y especiales.
-    - Incluir defensas fisicas y especiales.
-    - ...
+  Se deberia implementar alguna forma aleatoria de hacer golpes fisicos o especiales, que afectasen a la defensa correspondiente del personaje.
   
   Se deberia poder ofrecer al jugador la **posibilidad de escojer que tipo de personaje queria jugar** (models.py solo da opcion a Barbaro y Momia.)
