@@ -26,17 +26,22 @@ class Personaje():
    - nombre
    - vida
    - ataque
+   - ataque_especial
    - defensa
+   - defensa_especial
+   - velocidad
    
    mtds:
    - atacar()
    - estarVivo()
     """
-    def __init__(self,nombre,vida,ataque,defensa,velocidad):
+    def __init__(self,nombre,vida,ataque,ataque_especial,defensa,defensa_especial,velocidad):
         self.nombre = nombre
         self.vida = vida
         self.ataque = ataque
+        self.ataque_especial = ataque_especial
         self.defensa = defensa
+        self.defensa_especial = defensa_especial
         self.velocidad = velocidad
     
     def atacar(self):
