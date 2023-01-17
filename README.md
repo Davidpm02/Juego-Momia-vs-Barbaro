@@ -94,6 +94,15 @@ Se han añadido los atributos 'ataque_especial' y 'defensa_especial' a los perso
 <br>
 <br>
 
+<h2> COMMIT #7 </h2>
+Se han modificado los nombres de algunos atributos de la clase Personaje.
+Se han modificado los detalles de los comentarios de las clases en el archivo models.py.
+Se ha corregido el funcionamiento de la partida en el archivo main.py, acorde al nuevo nombre del atributo ataque (ataque_fisico)
+<br>
+<br>
+<br>
+<br>
+
 <h2>Futuros Commits</h2> 
   
   Se deberia implementar alguna forma aleatoria de hacer golpes fisicos o especiales, que afectasen a la defensa correspondiente del personaje.
