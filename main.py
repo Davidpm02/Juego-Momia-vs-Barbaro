@@ -44,7 +44,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                                                                                  ataquesRealizados,
                                                                                                  personaje2.vida))
                     posibleCritico = personaje1.atacar()   # .atacar() devuelve un entero que representa la cantidad de golpes validos
-                    if personaje1.ataque < 3:
+                    if personaje1.ataque_fisico < 3:
                         if posibleCritico == 2 :
                             nuevoAtaque = 1
                             personaje2.defender(nuevoAtaque)
@@ -52,7 +52,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                                                                                                         personaje2.nombre,
                                                                                                                         nuevoAtaque,
                                                                                                                         personaje2.vida))
-                    elif personaje1.ataque >= 3:
+                    elif personaje1.ataque_fisico >= 3:
                         if posibleCritico == 3 :
                             nuevoAtaque = 1
                             personaje2.defender(nuevoAtaque)
@@ -77,7 +77,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                                                                                  ataquesRealizados,
                                                                                                  personaje1.vida))
                     posibleCritico = personaje2.atacar()   # .atacar() devuelve un entero que representa la cantidad de golpes validos
-                    if personaje2.ataque < 3:
+                    if personaje2.ataque_fisico < 3:
                         if posibleCritico == 2:
                             nuevoAtaque = 1
                             personaje1.defender(nuevoAtaque)
@@ -85,7 +85,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                                                                                                         personaje1.nombre,
                                                                                                                         nuevoAtaque,
                                                                                                                         personaje1.vida))
-                    elif personaje2.ataque >= 3:
+                    elif personaje2.ataque_fisico >= 3:
                         if posibleCritico == 3:
                             nuevoAtaque = 1
                             personaje1.defender(nuevoAtaque)
@@ -148,7 +148,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                                                                                  ataquesRealizados,
                                                                                                  personaje1.vida))
                     posibleCritico = personaje2.atacar()   # .atacar() devuelve un entero que representa la cantidad de golpes validos
-                    if personaje2.ataque < 3:
+                    if personaje2.ataque_fisico < 3:
                         if posibleCritico == 2:
                             nuevoAtaque = 1
                             personaje1.defender(nuevoAtaque)
@@ -156,7 +156,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                                                                                                         personaje1.nombre,
                                                                                                                         nuevoAtaque,
                                                                                                                         personaje1.vida))
-                    elif personaje2.ataque >= 3:
+                    elif personaje2.ataque_fisico >= 3:
                         if posibleCritico == 3:
                             nuevoAtaque = 1
                             personaje1.defender(nuevoAtaque)
@@ -179,7 +179,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                                                                                  ataquesRealizados,
                                                                                                  personaje2.vida))
                     posibleCritico = personaje1.atacar()   # .atacar() devuelve un entero que representa la cantidad de golpes validos
-                    if personaje1.ataque < 3:
+                    if personaje1.ataque_fisico < 3:
                         if posibleCritico == 2:
                             nuevoAtaque = 1
                             personaje2.defender(nuevoAtaque)
@@ -187,7 +187,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                                                                                                         personaje2.nombre,
                                                                                                                         nuevoAtaque,
                                                                                                                         personaje2.vida))
-                    elif personaje1.ataque >= 3:
+                    elif personaje1.ataque_fisico >= 3:
                         if posibleCritico == 3:
                             nuevoAtaque = 1
                             personaje2.defender(nuevoAtaque)
@@ -290,7 +290,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
 
 if __name__ == '__main__':
 
-    momia = Momia('Nefertari',8,2,3,2)
-    barbaro = Barbaro('Conan',7,3,3,5)
+    momia = Momia('Nefertari',8,2,0,3,0,2)    # nombre,vida,atFisico,atEspecial,defFisica,defEspecial,velocidad
+    barbaro = Barbaro('Conan',7,3,0,3,0,5)
     
     jugarPartida(barbaro,momia)
