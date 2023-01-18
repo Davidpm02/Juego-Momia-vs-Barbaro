@@ -110,7 +110,7 @@ Se han introducido mecanicas de ataque Fisico y ataque Especial, pudiendo ahora 
 
 Este cambio esta implementado como una manera de crear a un personaje que tenga mayor valor de un ataque es especifico (podemos tener un personaje que posea un valor de ataque fisico mas elevado que su ataque especial, y viceversa.)
 
-Este cambio aporta algo de novedad, pues dependiendo de que tipo de atacante sea el personaje del turno de juego, este puede ser visto como mejor personaje sin necesidad de tener mejores estadisticas.
+Por otra parte, este cambio aporta algo de novedad, pues dependiendo de que tipo de atacante sea el personaje del turno de juego, este puede ser visto como mejor personaje sin necesidad de tener mejores estadisticas.
 
 <br>
 <br>
@@ -119,6 +119,17 @@ Este cambio aporta algo de novedad, pues dependiendo de que tipo de atacante sea
 
 <h2>Futuros Commits</h2> 
   
-  Se deberia implementar alguna forma aleatoria de hacer golpes fisicos o especiales, que afectasen a la defensa correspondiente del personaje.
+  Si dos personajes poseen las mismas estadisticas en el atributo velocidad, el programa deberia elegir de manera aleatoria que personaje empieza
+  antes.
+  
+  Se podria implementar un **modo de JvsJ**
+  
+   - Cada jugador deberia poder crearse un personaje in-game.
+    
+   - Las estadisticas de los personajes, deberian repartirse de manera aleatoria, pero en consecuencia con el tipo de atacante ( si es especial, el valor de ataque Fisico deberia ser menor, etc...).
+    
+   - A la hora de atacar, el jugador deberia poder elegir si efectuar un ataque fisico o uno especial.
   
   Se deberia poder ofrecer al jugador la **posibilidad de escojer que tipo de personaje queria jugar** (models.py solo da opcion a Barbaro y Momia.)
+  
+   - Se deberian crear unos cuantos personajes por defecto, y que el jugador pudiese elegir uno de ellos al momento de crear su personaje.
