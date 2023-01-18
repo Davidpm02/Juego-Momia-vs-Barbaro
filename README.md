@@ -96,8 +96,22 @@ Se han añadido los atributos 'ataque_especial' y 'defensa_especial' a los perso
 
 <h2> COMMIT #7 </h2>
 Se han modificado los nombres de algunos atributos de la clase Personaje.
+
 Se han modificado los detalles de los comentarios de las clases en el archivo models.py.
+
 Se ha corregido el funcionamiento de la partida en el archivo main.py, acorde al nuevo nombre del atributo ataque (ataque_fisico)
+<br>
+<br>
+<br>
+<br>
+
+<h2> COMMIT #8 </h2>
+Se han introducido mecanicas de ataque Fisico y ataque Especial, pudiendo ahora los personajes ejecutar un ataque cada tipo por turno de manera aleatoria.
+
+Este cambio esta implementado como una manera de crear a un personaje que tenga mayor valor de un ataque es especifico (podemos tener un personaje que posea un valor de ataque fisico mas elevado que su ataque especial, y viceversa.)
+
+Este cambio aporta algo de novedad, pues dependiendo de que tipo de atacante sea el personaje del turno de juego, este puede ser visto como mejor personaje sin necesidad de tener mejores estadisticas.
+
 <br>
 <br>
 <br>
