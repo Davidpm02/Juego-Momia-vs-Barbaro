@@ -1,20 +1,65 @@
 import random
+import time
 
 from models import Momia, Barbaro
 
 def comprobarVelocidad(personaje1,personaje2):
     if personaje1.velocidad > personaje2.velocidad:
-        resultado = '''El personaje {} es mas rapido que el personaje {}!\nEl personaje {} comienza el ataque antes.'''.format(personaje1.nombre,
+        print('''El personaje {} es mas rapido que el personaje {}!\nEl personaje {} comienza el ataque antes.'''.format(personaje1.nombre,
                                                                                                                               personaje2.nombre,
-                                                                                                                              personaje1.nombre)
+                                                                                                                              personaje1.nombre))
     elif personaje1.velocidad < personaje2.velocidad:
-        resultado = '''El personaje {} es mas rapido que el personaje {}!\nEl personaje {} comienza el ataque antes.'''.format(personaje2.nombre,
+        print('''El personaje {} es mas rapido que el personaje {}!\nEl personaje {} comienza el ataque antes.'''.format(personaje2.nombre,
                                                                                                                               personaje1.nombre,
-                                                                                                                              personaje2.nombre)
-    else:
-        resultado = '''Ha ocurrido un error al comprobar la velocidad de los personajes.'''
+                                                                                                                              personaje2.nombre))
+    elif personaje1.velocidad == personaje2.velocidad:
         
-    return print(resultado)
+        numerosJ1 = [1,3,5,7,9]
+        numerosJ2 = [2,4,6,8,10]
+        
+        
+        numeroEscogido = random.randint(1,10)
+        
+        if numeroEscogido in numerosJ1:
+            print('El personaje {} {} y el personaje {} {} tienen las mismas estadisticas de velocidad!'.format(type(personaje1).__name__.upper(),
+                                                                                                                personaje1.nombre,
+                                                                                                                type(personaje2).__name__.upper(),
+                                                                                                                personaje2.nombre),end='\n')
+            print('Se va a elegir aleatoriamente que personaje comienza antes...')
+            
+            personaje1.velocidad +=1                            # En el caso de que los dos personajes jugando tengan el mismo valor
+            time.sleep(1)                                       # en el atributo velocidad, la funcion elegirá de manera aleatoria un numero y,
+            print('...')                                        # en funcion del numero, se le sumana un punto de veolicadad al persona en cuestion.
+            time.sleep(1)
+            print('...')
+            time.sleep(1)
+            print('...')
+            print('El personaje {} {} comienza el ataque antes!'.format(type(personaje1).__name__.upper(),
+                                                                        personaje1.nombre))
+        elif numeroEscogido in numerosJ2:
+            print('El personaje {} {} y el personaje {} {} tienen las mismas estadisticas de velocidad!'.format(type(personaje1).__name__.upper(),
+                                                                                                                personaje1.nombre,
+                                                                                                                type(personaje2).__name__.upper(),
+                                                                                                                personaje2.nombre),end='\n')
+            print('Se va a elegir aleatoriamente que personaje comienza antes...')
+               
+            
+            personaje2.velocidad +=1
+            time.sleep(1)
+            print('...')
+            time.sleep(1)
+            print('...')
+            time.sleep(1)
+            print('...')
+            print('El personaje {} {} comienza el ataque antes!'.format(type(personaje2).__name__.upper(),
+                                                                        personaje2.nombre))
+
+            
+            
+        
+    else:  
+        print('''Ha ocurrido un error al comprobar la velocidad de los personajes.''')
+        
         
 
 def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Momia
@@ -75,6 +120,8 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                         contador +=1
                         totalTurnos -=1
                         print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print()
+                        print()
                         ataquesRealizados = 0
                     
                     elif tirada == 2:
@@ -108,7 +155,10 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                         contador +=1
                         totalTurnos -=1
                         print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print()
+                        print()
                         ataquesRealizados = 0
+            
                         
                 else:
                     print('# TURNO {} >> {} vs {}'.format(contador,
@@ -150,6 +200,8 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                         contador +=1
                         totalTurnos -=1
                         print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print()
+                        print()
                         ataquesRealizados = 0
                     
                     elif tirada == 2:
@@ -183,6 +235,8 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                         contador +=1
                         totalTurnos -=1
                         print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print()
+                        print()
                         ataquesRealizados = 0
                     
             except AssertionError:
@@ -265,6 +319,8 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                         contador +=1
                         totalTurnos -=1
                         print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print()
+                        print()
                         ataquesRealizados = 0
                     
                     elif tirada == 2:
@@ -297,6 +353,8 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                         contador +=1
                         totalTurnos -=1
                         print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print()
+                        print()
                         ataquesRealizados = 0
                     
                 else:
@@ -339,6 +397,8 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                         contador +=1
                         totalTurnos -=1
                         print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print()
+                        print()
                         ataquesRealizados = 0
                     
                     elif tirada == 2:
@@ -371,6 +431,8 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                         contador +=1
                         totalTurnos -=1
                         print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print()
+                        print()
                         ataquesRealizados = 0
                         
             except AssertionError:
@@ -471,15 +533,15 @@ if __name__ == '__main__':
                   vida = 13,
                   ataque_fisico = 2,
                   ataque_especial = 4,
-                  defensa_fisica = 3,
-                  defensa_especial = 3,
-                  velocidad = 2)   
+                  defensa_fisica = 6,   # Los valores de defensa de los personajes deben ser superiores a los valores de ataque
+                  defensa_especial = 6, # para evitar posibles errores.
+                  velocidad = 5)   
     barbaro = Barbaro(nombre = 'Conan',
                       vida = 13,
                       ataque_fisico = 5,
                       ataque_especial = 2,
-                      defensa_fisica = 4,
-                      defensa_especial = 3,
+                      defensa_fisica = 6,
+                      defensa_especial = 6,
                       velocidad = 5)
     
     jugarPartida(barbaro,momia)
