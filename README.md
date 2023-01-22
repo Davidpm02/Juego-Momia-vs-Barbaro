@@ -117,10 +117,18 @@ Por otra parte, este cambio aporta algo de novedad, pues dependiendo de que tipo
 <br>
 <br>
 
+<h2> COMMIT #9 </h2>
+Se ha implementado una nueva funcionalidad que ocurre en el caso de que, al comenzar una partida, ambos personajes posean las mismas estadisticas en su atributo velocidad.
+
+Ahora, la funcion de comprobarVelocidad() elegira de manera aleatoria un numero de un rango dado, y en funcion del numero elegido, se aumentara el valor en 1 punto de la velocidad de un personaje, pudiendo asi empezar antes que el otro.
+
+Todo esto sera impreso por pantalla, para que el usuario pueda ver que personaje empieza antes que el otro.
+<br>
+<br>
+<br>
+<br>
+
 <h2>Futuros Commits</h2> 
-  
-  Si dos personajes poseen las mismas estadisticas en el atributo velocidad, el programa deberia elegir de manera aleatoria que personaje empieza
-  antes.
   
   Se podria implementar un **modo de JvsJ**
   
