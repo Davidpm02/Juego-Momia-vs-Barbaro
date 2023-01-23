@@ -250,35 +250,43 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                     
             except AssertionError:
                 if personaje1.estarVivo() == False and personaje2.estarVivo() == True:
-                    print("""> GANADOR {} {}
-                           >>> {} {} con {} de vida.
-                           >>> {} {} con {} de vida.""".format(type(personaje2).__name__.upper(),
-                                                                    personaje2.nombre,
-                                                                    type(personaje2).__name__,
-                                                                    personaje2.nombre,
-                                                                    personaje2.vida,
-                                                                    type(personaje1).__name__,
-                                                                    personaje1.nombre,
-                                                                    0))
-                    print('--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1))
-                    print('\n'*2)
-                    print('*'*50)
+                    print('*'*75)
+                    print('*',' '*71,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*10,'> GANADOR {} {}'.format(type(personaje2).__name__.upper(),
+                                                              personaje2.nombre),' '*34,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*25,'>>> {} {} con {} de vida.'.format(type(personaje2).__name__,
+                                                             personaje2.nombre,
+                                                             personaje2.vida),' '*9,'*')
+                    print('*',' '*25,'>>> {} {} con {} de vida.'.format(type(personaje1).__name__,
+                                                             personaje1.nombre,
+                                                             0),' '*12,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*19,'--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1),' '*18,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*71,'*')
+                    print('*'*75)
                     print('\n'*5)
                     totalTurnos = 0  
                 elif personaje1.estarVivo() == True and personaje2.estarVivo() == False:
-                    print("""> GANADOR {} {}
-                           >>> {} {} con {} de vida.
-                           >>> {} {} con {} de vida.""".format(type(personaje1).__name__.upper(),
-                                                                  personaje1.nombre,
-                                                                  type(personaje1).__name__,
-                                                                  personaje1.nombre,
-                                                                  personaje1.vida,
-                                                                  type(personaje2).__name__,
-                                                                  personaje2.nombre,
-                                                                  0))
-                    print('--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1))
-                    print('\n'*2)
-                    print('*'*50)
+                    print('*'*75)
+                    print('*',' '*71,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*10,'> GANADOR {} {}'.format(type(personaje1).__name__.upper(),
+                                                              personaje1.nombre),' '*36,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*25,'>>> {} {} con {} de vida.'.format(type(personaje1).__name__,
+                                                             personaje1.nombre,
+                                                             personaje1.vida),' '*11,'*')
+                    print('*',' '*25,'>>> {} {} con {} de vida.'.format(type(personaje2).__name__,
+                                                             personaje2.nombre,
+                                                             0),' '*10,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*19,'--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1),' '*18,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*71,'*')
+                    print('*'*75)
                     print('\n'*5)
                 totalTurnos = 0
                 break
@@ -446,35 +454,43 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                         
             except AssertionError:
                 if personaje1.estarVivo() == False and personaje2.estarVivo() == True:
-                    print("""> GANADOR {} {}
-                           >>> {} {} con {} de vida.
-                           >>> {} {} con {} de vida.""".format(type(personaje2).__name__.upper(),
-                                                                    personaje2.nombre,
-                                                                    type(personaje2).__name__,
-                                                                    personaje2.nombre,
-                                                                    personaje2.vida,
-                                                                    type(personaje1).__name__,
-                                                                    personaje1.nombre,
-                                                                    0))
-                    print('--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1))
-                    print('\n'*2)
-                    print('*'*50)
+                    print('*'*75)
+                    print('*',' '*71,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*10,'> GANADOR {} {}'.format(type(personaje2).__name__.upper(),
+                                                              personaje2.nombre),' '*34,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*25,'>>> {} {} con {} de vida.'.format(type(personaje2).__name__,
+                                                             personaje2.nombre,
+                                                             personaje2.vida),' '*9,'*')
+                    print('*',' '*25,'>>> {} {} con {} de vida.'.format(type(personaje1).__name__,
+                                                             personaje1.nombre,
+                                                             0),' '*12,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*19,'--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1),' '*18,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*71,'*')
+                    print('*'*75)
                     print('\n'*5)
                     totalTurnos = 0
                 elif personaje1.estarVivo() == True and personaje2.estarVivo() == False:
-                    print("""> GANADOR {} {}
-                           >>> {} {} con {} de vida.
-                           >>> {} {} con {} de vida.""".format(type(personaje1).__name__.upper(),
-                                                                  personaje1.nombre,
-                                                                  type(personaje1).__name__,
-                                                                  personaje1.nombre,
-                                                                  personaje1.vida,
-                                                                  type(personaje2).__name__,
-                                                                  personaje2.nombre,
-                                                                  0))
-                    print('--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1))
-                    print('\n'*2)
-                    print('*'*50)
+                    print('*'*75)
+                    print('*',' '*71,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*10,'> GANADOR {} {}'.format(type(personaje1).__name__.upper(),
+                                                              personaje1.nombre),' '*36,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*25,'>>> {} {} con {} de vida.'.format(type(personaje1).__name__,
+                                                             personaje1.nombre,
+                                                             personaje1.vida),' '*11,'*')
+                    print('*',' '*25,'>>> {} {} con {} de vida.'.format(type(personaje2).__name__,
+                                                             personaje2.nombre,
+                                                             0),' '*10,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*19,'--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1),' '*18,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*71,'*')
+                    print('*'*75)
                     print('\n'*5)
                 totalTurnos = 0
                 break
@@ -482,50 +498,63 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
         else:
             try:
                 assert personaje1.estarVivo() == True and personaje2.estarVivo() == True
-                print("""> EMPATE
-                            >>> {} {} con {} de vida.
-                            >>> {} {} con {} de vida.""".format(type(personaje1).__name__,
-                                                                personaje1.nombre,
-                                                                personaje1.vida,
-                                                                type(personaje2).__name__,
-                                                                personaje2.nombre,
-                                                                personaje2.vida))
-                print('--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1))
-                print('\n'*2)
-                print('*'*50)
+                print('*'*75)
+                print('*',' '*71,'*')
+                print('*',' '*71,'*')
+                print('*',' '*10,'> EMPATE',' '*51,'*')
+                print('*',' '*71,'*')
+                print('*',' '*25,'>>> {} {} con {} de vida. '.format(type(personaje1).__name__,
+                                                                    personaje1.nombre,
+                                                                    personaje1.vida),' '*11,'*')
+                print('*',' '*25,'>>> {} {} con {} de vida. '.format(type(personaje2).__name__,
+                                                                    personaje2.nombre,
+                                                                    personaje2.vida),' '*8,'*')
+                print('*',' '*71,'*')
+                print('*',' '*19,'--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1),' '*18,'*')
+                print('*',' '*71,'*')
+                print('*',' '*71,'*')
+                print('*'*75)
                 print('\n'*5)
                 break
             except AssertionError:
                 if personaje1.estarVivo() == False and personaje2.estarVivo() == True:
-                    print("""> GANADOR {} {}
-                           >>> {} {} con {} de vida.
-                           >>> {} {} con {} de vida.""".format(type(personaje2).__name__.upper(),
-                                                                    personaje2.nombre,
-                                                                    type(personaje2).__name__,
-                                                                    personaje2.nombre,
-                                                                    personaje2.vida,
-                                                                    type(personaje1).__name__,
-                                                                    personaje1.nombre,
-                                                                    0))
-                    print('--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1))
-                    print('\n'*2)
-                    print('*'*50)
+                    print('*'*75)
+                    print('*',' '*71,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*10,'> GANADOR {} {}'.format(type(personaje2).__name__.upper(),
+                                                              personaje2.nombre),' '*34,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*25,'>>> {} {} con {} de vida.'.format(type(personaje2).__name__,
+                                                             personaje2.nombre,
+                                                             personaje2.vida),' '*9,'*')
+                    print('*',' '*25,'>>> {} {} con {} de vida.'.format(type(personaje1).__name__,
+                                                             personaje1.nombre,
+                                                             0),' '*12,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*19,'--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1),' '*18,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*71,'*')
+                    print('*'*75)
                     print('\n'*5)
                     totalTurnos = 0  
                 elif personaje1.estarVivo() == True and personaje2.estarVivo() == False:
-                    print("""> GANADOR {} {}
-                           >>> {} {} con {} de vida.
-                           >>> {} {} con {} de vida.""".format(type(personaje1).__name__.upper(),
-                                                                  personaje1.nombre,
-                                                                  type(personaje1).__name__,
-                                                                  personaje1.nombre,
-                                                                  personaje1.vida,
-                                                                  type(personaje2).__name__,
-                                                                  personaje2.nombre,
-                                                                  0))
-                    print('--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1))
-                    print('\n'*2)
-                    print('*'*50)
+                    print('*'*75)
+                    print('*',' '*71,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*10,'> GANADOR {} {}'.format(type(personaje1).__name__.upper(),
+                                                              personaje1.nombre),' '*36,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*25,'>>> {} {} con {} de vida.'.format(type(personaje1).__name__,
+                                                             personaje1.nombre,
+                                                             personaje1.vida),' '*11,'*')
+                    print('*',' '*25,'>>> {} {} con {} de vida.'.format(type(personaje2).__name__,
+                                                             personaje2.nombre,
+                                                             0),' '*10,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*19,'--- TOTAL TURNOS JUGADOS: {} ---'.format(contador -1),' '*18,'*')
+                    print('*',' '*71,'*')
+                    print('*',' '*71,'*')
+                    print('*'*75)
                     print('\n'*5)
                 totalTurnos = 0
                 break
@@ -539,18 +568,18 @@ if __name__ == '__main__':
     # ataque_fisico), y otro mayor ataque especial (valor mas alto en ataque_especial).
 
     momia = Momia(nombre = 'Nefertari',
-                  vida = 13,
-                  ataque_fisico = 2,
-                  ataque_especial = 4,
-                  defensa_fisica = 6,   # Los valores de defensa de los personajes deben ser superiores a los valores de ataque
-                  defensa_especial = 6, # para evitar posibles errores.
-                  velocidad = 5)   
+                  vida = 49,
+                  ataque_fisico = 16,
+                  ataque_especial = 12,
+                  defensa_fisica = 11,   # Los valores de defensa de los personajes deben ser superiores a los valores de ataque
+                  defensa_especial = 11, # para evitar posibles errores.
+                  velocidad = 10)   
     barbaro = Barbaro(nombre = 'Conan',
-                      vida = 13,
-                      ataque_fisico = 5,
-                      ataque_especial = 2,
-                      defensa_fisica = 6,
-                      defensa_especial = 6,
-                      velocidad = 8)
+                      vida = 52,
+                      ataque_fisico = 17,
+                      ataque_especial = 10,
+                      defensa_fisica = 20,
+                      defensa_especial = 18,
+                      velocidad = 10)
     
     jugarPartida(barbaro,momia)
