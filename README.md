@@ -128,6 +128,13 @@ Todo esto sera impreso por pantalla, para que el usuario pueda ver que personaje
 <br>
 <br>
 
+<h2> COMMIT #10 </h2>
+Ha sido mejorada la experiencia visual al comenzar una partida introduciendo todos los mensajes iniciales en una especie de marco de bienvenida.
+<br>
+<br>
+<br>
+<br>
+
 <h2>Futuros Commits</h2> 
   
   Se podria implementar un **modo de JvsJ**
