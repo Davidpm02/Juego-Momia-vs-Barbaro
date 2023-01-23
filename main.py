@@ -21,38 +21,41 @@ def comprobarVelocidad(personaje1,personaje2):
         numeroEscogido = random.randint(1,10)
         
         if numeroEscogido in numerosJ1:
-            print('El personaje {} {} y el personaje {} {} tienen las mismas estadisticas de velocidad!'.format(type(personaje1).__name__.upper(),
+            print('*',' '*3,'El personaje {} {} y el personaje {} {} tienen las mismas estadisticas de velocidad!'.format(type(personaje1).__name__.upper(),
                                                                                                                 personaje1.nombre,
                                                                                                                 type(personaje2).__name__.upper(),
-                                                                                                                personaje2.nombre),end='\n')
-            print('Se va a elegir aleatoriamente que personaje comienza antes...')
+                                                                                                                personaje2.nombre),' '*3,'*',end='\n')
+            print('*',' '*3,'Se va a elegir aleatoriamente que personaje comienza antes...',' '*44,'*')
             
             personaje1.velocidad +=1                            # En el caso de que los dos personajes jugando tengan el mismo valor
             time.sleep(1)                                       # en el atributo velocidad, la funcion elegirá de manera aleatoria un numero y,
-            print('...')                                        # en funcion del numero, se le sumana un punto de veolicadad al persona en cuestion.
+            print('*',' '*3,'.',' '*104,'*')                                        # en funcion del numero, se le sumana un punto de veolicadad al persona en cuestion.
             time.sleep(1)
-            print('...')
+            print('*',' '*3,'..',' '*103,'*')
             time.sleep(1)
-            print('...')
-            print('El personaje {} {} comienza el ataque antes!'.format(type(personaje1).__name__.upper(),
-                                                                        personaje1.nombre))
+            print('*',' '*3,'...',' '*102,'*')
+            print('*',' '*3,'El personaje {} {} comienza el ataque antes!'.format(type(personaje1).__name__.upper(),
+                                                                        personaje1.nombre),' '*53,'*')
+            
+            
         elif numeroEscogido in numerosJ2:
-            print('El personaje {} {} y el personaje {} {} tienen las mismas estadisticas de velocidad!'.format(type(personaje1).__name__.upper(),
+            print('*',' '*3,'El personaje {} {} y el personaje {} {} tienen las mismas estadisticas de velocidad!'.format(type(personaje1).__name__.upper(),
                                                                                                                 personaje1.nombre,
                                                                                                                 type(personaje2).__name__.upper(),
-                                                                                                                personaje2.nombre),end='\n')
-            print('Se va a elegir aleatoriamente que personaje comienza antes...')
+                                                                                                                personaje2.nombre),' '*3,'*',end='\n')
+            print('*',' '*3,'Se va a elegir aleatoriamente que personaje comienza antes...',' '*44,'*')
                
             
             personaje2.velocidad +=1
+            time.sleep(1)                                       # en el atributo velocidad, la funcion elegirá de manera aleatoria un numero y,
+            print('*',' '*3,'.',' '*104,'*')                                        # en funcion del numero, se le sumana un punto de veolicadad al persona en cuestion.
             time.sleep(1)
-            print('...')
+            print('*',' '*3,'..',' '*103,'*')
             time.sleep(1)
-            print('...')
-            time.sleep(1)
-            print('...')
-            print('El personaje {} {} comienza el ataque antes!'.format(type(personaje2).__name__.upper(),
-                                                                        personaje2.nombre))
+            print('*',' '*3,'...',' '*102,'*')
+            print('*',' '*3,'El personaje {} {} comienza el ataque antes!'.format(type(personaje2).__name__.upper(),
+                                                                        personaje2.nombre),' '*51,'*')
+            
 
             
             
@@ -66,12 +69,16 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
     totalTurnos = int(input("Seleccione el numero de turnos que desea jugar:"))
     
     print('\n'*5)
-    print('*'*50)
-    print('\n'*2)
-    print("El numero total de turnos establecido es de {} turnos.".format(totalTurnos))
-    print('\n'*2)
+    print('*'*114)
+    print('*',' '*110,'*',end='\n')
+    print('*',' '*110,'*',end='\n')
+    print('*',' '*7,"El numero total de turnos establecido es de {} turnos.".format(totalTurnos),' '*47,'*')
+    print('*',' '*110,'*',end='\n')
+    print('*',' '*110,'*',end='\n')
     comprobarVelocidad(personaje1,personaje2)
-    print('*'*50)
+    print('*',' '*110,'*',end='\n')
+    print('*',' '*110,'*',end='\n')
+    print('*'*114)
     print('\n'*2)
     
     
@@ -119,7 +126,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                 
                         contador +=1
                         totalTurnos -=1
-                        print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print("----- TURNOS RESTANTES: {} -----".format(totalTurnos))
                         print()
                         print()
                         ataquesRealizados = 0
@@ -154,7 +161,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                 
                         contador +=1
                         totalTurnos -=1
-                        print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print("----- TURNOS RESTANTES: {} -----".format(totalTurnos))
                         print()
                         print()
                         ataquesRealizados = 0
@@ -199,7 +206,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                                                                                                             personaje1.vida))
                         contador +=1
                         totalTurnos -=1
-                        print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print("----- TURNOS RESTANTES: {} -----".format(totalTurnos))
                         print()
                         print()
                         ataquesRealizados = 0
@@ -234,7 +241,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                 
                         contador +=1
                         totalTurnos -=1
-                        print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print("----- TURNOS RESTANTES: {} -----".format(totalTurnos))
                         print()
                         print()
                         ataquesRealizados = 0
@@ -318,7 +325,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                                                                                                             personaje1.vida))
                         contador +=1
                         totalTurnos -=1
-                        print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print("----- TURNOS RESTANTES: {} -----".format(totalTurnos))
                         print()
                         print()
                         ataquesRealizados = 0
@@ -352,7 +359,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                 
                         contador +=1
                         totalTurnos -=1
-                        print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print("----- TURNOS RESTANTES: {} -----".format(totalTurnos))
                         print()
                         print()
                         ataquesRealizados = 0
@@ -396,7 +403,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                                                                                                             personaje2.vida))
                         contador +=1
                         totalTurnos -=1
-                        print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print("----- TURNOS RESTANTES: {} -----".format(totalTurnos))
                         print()
                         print()
                         ataquesRealizados = 0
@@ -430,7 +437,7 @@ def jugarPartida(personaje1,personaje2):  #personaje1 = Barbaro, personaje2 = Mo
                                 
                         contador +=1
                         totalTurnos -=1
-                        print("-----TURNOS RESTANTES: {} -----".format(totalTurnos))
+                        print("----- TURNOS RESTANTES: {} -----".format(totalTurnos))
                         print()
                         print()
                         ataquesRealizados = 0
