@@ -142,6 +142,13 @@ Se ha corregido el mensaje del commit anterior (la mejora anterior solo estaba i
 <br>
 <br>
 
+<h2> COMMIT #12 </h2>
+Se ha actualizado el mensaje final de la partida introduciendo todos los mensajes finales un marco.
+
+<br>
+<br>
+<br>
+<br>
 
 <h2>Futuros Commits</h2> 
   
