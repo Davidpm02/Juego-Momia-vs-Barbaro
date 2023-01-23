@@ -135,6 +135,14 @@ Ha sido mejorada la experiencia visual al comenzar una partida introduciendo tod
 <br>
 <br>
 
+<h2> COMMIT #11 </h2>
+Se ha corregido el mensaje del commit anterior (la mejora anterior solo estaba implementada en el caso de que ambos personajes en la batalla tengan las mismas estadisticas en el atributo velocidad.)
+<br>
+<br>
+<br>
+<br>
+
+
 <h2>Futuros Commits</h2> 
   
   Se podria implementar un **modo de JvsJ**
