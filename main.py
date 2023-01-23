@@ -5,13 +5,15 @@ from models import Momia, Barbaro
 
 def comprobarVelocidad(personaje1,personaje2):
     if personaje1.velocidad > personaje2.velocidad:
-        print('''El personaje {} es mas rapido que el personaje {}!\nEl personaje {} comienza el ataque antes.'''.format(personaje1.nombre,
-                                                                                                                              personaje2.nombre,
-                                                                                                                              personaje1.nombre))
+        print('*',' '*12,'El personaje {} es mas rapido que el personaje {}!'.format(personaje1.nombre,
+                                                                                     personaje2.nombre),' '*36,'*')
+        print('*',' '*12,'El personaje {} comienza el ataque antes.'.format(personaje1.nombre),' '*52,'*')
+        
     elif personaje1.velocidad < personaje2.velocidad:
-        print('''El personaje {} es mas rapido que el personaje {}!\nEl personaje {} comienza el ataque antes.'''.format(personaje2.nombre,
-                                                                                                                              personaje1.nombre,
-                                                                                                                              personaje2.nombre))
+        print('*',' '*12,'El personaje {} es mas rapido que el personaje {}!'.format(personaje2.nombre,
+                                                                                     personaje1.nombre),' '*36,'*')
+        print('*',' '*12,'El personaje {} comienza el ataque antes.'.format(personaje2.nombre),' '*48,'*')
+        
     elif personaje1.velocidad == personaje2.velocidad:
         
         numerosJ1 = [1,3,5,7,9]
@@ -549,6 +551,6 @@ if __name__ == '__main__':
                       ataque_especial = 2,
                       defensa_fisica = 6,
                       defensa_especial = 6,
-                      velocidad = 5)
+                      velocidad = 8)
     
     jugarPartida(barbaro,momia)
